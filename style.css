@@ -1,12 +1,80 @@
 :root {
-    --color-heading: #0B0D19;
-    --color-body: #677386;
-    --color-bg-button: #3D7BFA;
-    --color-text-button: #FFF;
+  --color-heading: #0b0d19;
+  --color-body: #677386;
+  --color-bg-button: #3d7bfa;
+  --color-text-button: #fff;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+  --hide-overlay: 1;
 }
 
-
 /* Begynd her... */
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px 100px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 50px 0 20px 0;
+}
+
+p {
+  max-width: 50ch;
+}
+
+button {
+  background-color: #3d7bfa;
+  color: #fff;
+  padding: 15px;
+  border-radius: 60px;
+  margin-top: 40px;
+}
+
+.seven {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.seven img {
+  border-radius: 30px;
+}
+
+.seven img:first-child {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.seven img:nth-child(2) {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.seven img:nth-child(3) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.seven img:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+
+.seven img:nth-child(5) {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.seven img:nth-child(6) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.seven img:nth-child(7) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
