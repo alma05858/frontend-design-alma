@@ -28,12 +28,32 @@ const { id, question, answer, linkBlock } = props;
     color: hsl(190 30% 12%);
     border-bottom: 1px solid #dadada;
 
+    @media (prefers-reduced-motion: no-preference) {
+      interpolate-size: allow-keywords;
+    }
+
+    &[open]::details-content {
+      opacity: 1;
+      block-size: auto;
+    }
+
+    &::details-content {
+      opacity: 0;
+      block-size: 0;
+      overflow-y: clip;
+      transition:
+        content-visibility 1s allow-discrete,
+        opacity 1s,
+        block-size 1s;
+    }
+
     summary {
       font-weight: 700;
       color: #181818;
       text-wrap: revert;
       user-select: none;
       cursor: pointer;
+      inline-size: 50ch;
 
       &::marker,
       &::-webkit-details-marker {
